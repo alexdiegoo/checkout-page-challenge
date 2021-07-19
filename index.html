@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Checkout</h1>
+    </header>
+    <main>
+      <form>
+        <div class="form-container">
+          <section>
+            <fieldset>
+              <legend>Contact infomation</legend>
+              <div class="input-group">
+                <label for="email">E-mail</label>
+                <div class="input">
+                  <span class="material-icons">
+                    email
+                  </span>
+                  <input type="email" name="email" id="email" required placeholder="Enter your email...">
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="phone">Phone</label>
+                <div class="input">
+                  <span class="material-icons">
+                    call
+                  </span>
+                  <input type="text" name="phone" id="phone" required placeholder="Enter your phone...">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Shipping address</legend>
+              <div class="input-group">
+                <label for="name">Full name</label>
+                <div class="input">
+                  <span class="material-icons">
+                    account_circle
+                  </span>
+                  <input type="text" name="name" id="name" required placeholder="Your name..">
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="address">Address</label>
+                <div class="input">
+                  <span class="material-icons">
+                    home
+                  </span>
+                  <input type="text" name="address" id="address" required placeholder="Your address..">
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="city">City</label>
+                <div class="input">
+                  <span class="material-icons">
+                    location_city
+                  </span>
+                  <input type="text" name="city" id="city" required placeholder="Your city..">
+                </div>
+              </div>
+              <div class="inputs-in-line">
+                <div class="input-group">
+                  <label for="country">Country</label>
+                  <div class="input input-select">
+                    <span class="material-icons">
+                      public
+                    </span>
+                    <select id="country" name="country">
+                      <option value="">Your country..</option>
+                      <option value="brazil">Brazil</option>
+                      <option value="eua">EUA</option>
+                      <option value="portugal">Portugal</option>
+                    </select>
+                    <span class="material-icons arrow-down">
+                      keyboard_arrow_down
+                    </span>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="postal-code">Postal code</label>
+                  <div class="input">
+                    <span class="material-icons">
+                      markunread_mailbox
+                    </span>
+                    <input type="text" name="postalCode" id="postalCode" required placeholder="Your postal code..">
+                  </div>
+                </div>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" name="saveInformation" id="saveInformation" required>
+                <label for="save-information">
+                  Save this information for next time
+                </label>
+              </div>
+            </fieldset>
+            <button type="submit" class="form-button">
+              Continue
+            </button>
+          </section>
+         
+          <section>
+            <div class="card-product">
+              <div class="product-list">
+                <div class="product">
+                  <div class="product-img">
+                    <img src="./img/photo1.png" alt="product-1">
+                  </div>
+                  <div class="input-group">
+                    <div class="info-product">
+                      <label for="vintage-backdag">Vintage Backbag</label>
+                      <p class="price">
+                        $54.99 <small>$94.99</small>
+                      </p>
+                      <div class="quantity-input">
+                        <button>
+                          <span class="material-icons" onclick="removeProductQuantity(0)">
+                            remove
+                          </span>
+                        </button>
+                       
+                        <input type="number" value="1" id="vintage-backdag">
+                        <button>
+                          <span class="material-icons" onclick="addProductQuantity(0)">
+                            add
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="product">
+                  <div class="product-img">
+                    <img src="./img/photo2.png" alt="product-2">
+                  </div>
+                  <div class="input-group">
+                    <div class="info-product">
+                      <label for="">Levi Shoes</label>
+                      <p class="price">
+                        $74.99 <small>$124.99</small>
+                      </p>
+                      <div class="quantity-input">
+                        <button>
+                          <span class="material-icons" onclick="removeProductQuantity(1)">
+                            remove
+                          </span>
+                        </button>
+                       
+                        <input type="number" value="1" id="levi-shoes">
+                        <button>
+                          <span class="material-icons" onclick="addProductQuantity(1)">
+                            add
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="value-info">
+                <div class="info">
+                  <p>Shipping</p>
+                  <small>$19</small>
+                </div>
+                <div class="info">
+                  <p>Total</p>
+                  <small id="total">$148.98</small>
+                </div>
+              </div>
+            </div>
+            
+            
+          </section>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="./js/selectProductQuantity.js"></script>
+</body>
+</html>
