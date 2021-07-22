@@ -15,8 +15,8 @@ const addProductQuantity = (product) => {
   newTotalValue();
 }
 
-const removeProductQuantity = (product) => {
-  const changedProduct = products[product];
+const removeProductQuantity = (index) => {
+  const changedProduct = products[index];
   const value = Number(changedProduct.value);
 
   if (value == 1) return;
